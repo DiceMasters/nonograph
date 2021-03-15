@@ -1,32 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<SubNav/>
+		<Title/>
+		<router-view/>
+	</div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Title from './components/Title'
+import SubNav from './components/SubNavigation'
+
+export default {
+	components: { Title, SubNav }
+}
+</script>
+
+<style>
+html, body {
+	padding: 0;
+	margin: 0;
 }
 
-#nav {
-  padding: 30px;
+* {
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+*:focus { outline: none; }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+	max-width: 100vw;
+	max-height: 100vh;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Arimo', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #333;
 }
 </style>
