@@ -5,6 +5,11 @@ import store from './store'
 
 import './assets/fonts/Arimo/stylesheet.css'
 
+/**
+ * import bridge from '@vkontakte/vk-bridge'
+ * в компоненты это
+ */
+
 Vue.config.productionTip = false
 
 new Vue({
